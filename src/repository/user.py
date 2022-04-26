@@ -8,6 +8,14 @@ def get_users():
     data = json.load(f)
     return data
 
+def get_user(user_id):
+    f = open("../data/users.json")
+    data = json.load(f)
+    for user in data:
+        if user['id'] == user_id:
+            return user
+
+    return None
 
 def add_user(user: User):
     f = open("../data/users.json")

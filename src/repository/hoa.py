@@ -7,8 +7,7 @@ def get_hoas():
     data = json.load(f)
     return data
 
-
-def add_user(hoa: HOA):
+def add_hoa(hoa: HOA):
     f = open("../data/hoas.json")
     data = json.load(f)
     f.close()
